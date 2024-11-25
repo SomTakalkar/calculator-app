@@ -1,38 +1,109 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+.calculator {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Increased width for better button spacing */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.screen {
+  background: #333;
+  color: #fff;
+  font-size: 1.8em; /* Slightly reduced font size for better scaling */
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: right; /* Aligns numbers and results to the right */
+  overflow: hidden; /* Prevents overflow of large numbers */
+  white-space: nowrap; /* Prevents text wrapping */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four buttons per row */
+  gap: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn {
+  padding: 15px; /* Adjusted padding for consistency */
+  font-size: 1.2em; /* Scaled font size to prevent overflow */
+  cursor: pointer;
+  background: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 60px; /* Fixed height for uniform buttons */
+}
+
+.btn:hover {
+  background: #e4e4e4;
+}
+
+.btn:active {
+  background: #ddd;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Special Button Styles */
+.toggle-btn {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.del-btn {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.clear-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+/* Style the links like buttons */
+.btn-nav-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
   color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover effect */
+.btn-nav-link:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Active link style */
+.btn-nav-link:active {
+  background-color: #004085;
 }
